@@ -295,7 +295,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
+    height: auto;
     font-size: 100px;
     gap: 80px;
     z-index: 10;
@@ -383,6 +383,7 @@ section {
     flex-grow: 1;
     overflow-y: scroll;
     display: flex;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px 10px;
@@ -575,6 +576,12 @@ section {
 }
 
 /* Responsive */
+@media (max-width: 1285px) {
+    .project-screens img {
+        width: 60%;
+    }
+}
+
 @media (max-width: 1200px) {
     .main-navigation {
         display: none;
@@ -595,6 +602,16 @@ section {
     }
 }
 
+@media (max-width: 970px) {
+    .section-projects {
+        flex-wrap: wrap;
+    }
+
+    .project-screens img {
+        width: 20%;
+    }
+}
+
 @media (max-width: 850px) {
     .section-welcome h1 {
         font-size: 60px;
@@ -611,11 +628,70 @@ section {
     .section-about-me p {
         font-size: 20px;
     }
+
+    .skill-item .skill-title {
+        font-size: 24px;
+    }
+
+    .skill-item .skill-title i {
+        font-size: 43px;
+    }
+
+    .skill-item ul {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .oops {
+        font-size: 120px;
+    }
+
+    .not-found {
+        font-size: 30px;
+    }
+
+    .no-motivation {
+        font-size: 20px;
+    }
+
+    .skill-items {
+        gap: 20px;
+    }
+
+    .container-skills,
+    .container-about-me {
+        width: 85%;
+    }
+
+    .btn-open-cv {
+        border: 1px solid black;
+        border-radius: 40px;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+    }
 }
 
 @media (max-width: 550px) {
     .container-contact {
         font-size: 60px;
+    }
+
+    .oops {
+        font-size: 100px;
+    }
+
+    .not-found {
+        font-size: 25px;
+    }
+
+    .no-motivation {
+        font-size: 16px;
+    }
+
+    .motivate-me {
+        font-size: 18px;
     }
 }
 
@@ -639,10 +715,42 @@ section {
     .section-about-me p {
         font-size: 15px;
     }
+
+    .skill-item .skill-title {
+        font-size: 20px;
+    }
+
+    .skill-item .skill-title i {
+        font-size: 38px;
+    }
+
+    .skill-item ul {
+        font-size: 14px;
+    }
+
+    .skill-item {
+        gap: 8px;
+    }
 }
 
 @media (max-width: 400px) {
     .container-contact {
         font-size: 40px;
+    }
+
+    .oops {
+        font-size: 70px;
+    }
+
+    .not-found {
+        font-size: 20px;
+    }
+
+    .no-motivation {
+        font-size: 12px;
+    }
+
+    .skill-items {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
